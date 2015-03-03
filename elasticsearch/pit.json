@@ -1,0 +1,41 @@
+{
+  "pit": {
+    "properties" : {
+      "name": {
+        "type" : "string",
+        "index" : "analyzed",
+        "store" : true
+      },
+      "layer": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "hgid": {
+        "type": "string",
+        "index": "not_analyzed",
+        "store" : true
+      },
+      "uri": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "type": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "startDate": {
+        "type" : "date",
+        "format" : "date_optional_time"
+      },
+      "endDate": {
+        "type" : "date",
+        "format" : "date_optional_time"
+      },
+      "geometry": {
+        "type": "geo_shape",
+        "tree": "quadtree",
+        "precision": "1m"
+      }
+    }
+  }
+}
