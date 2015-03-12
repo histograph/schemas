@@ -6,7 +6,7 @@
         "index" : "analyzed",
         "store" : true
       },
-      "layer": {
+      "source": {
         "type": "string",
         "index": "not_analyzed"
       },
