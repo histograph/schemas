@@ -13,7 +13,20 @@
     },
     "label": {
       "id": "http://erfgeo.nl/rdf/edge/label",
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "hg:absorbed",
+        "hg:absorbedBy",
+        "hg:contains",
+        "hg:hasGeoFeature",
+        "hg:hasName",
+        "hg:hasPitType",
+        "hg:hasProvEntity",
+        "hg:hasTimeTemporalEntity",
+        "hg:isUsedFor",
+        "hg:sameHgConcept",
+        "hg:within"
+      ]
     }
   },
   "required": [
