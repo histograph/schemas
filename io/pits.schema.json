@@ -21,6 +21,7 @@
 	      "hg:Departement",
 	      "hg:Gebied",
 	      "hg:Gemeente",
+        "hg:Gewest",
 	      "hg:Graafschap",
 	      "hg:Heerlijkheid",
 	      "hg:Land",
@@ -38,16 +39,37 @@
     },
 	"time:hasBeginning": {
 		"type": "string",
-		"pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$"
+		"pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$|^$"
 	},
 	"time:hasEnd": {
 		"type": "string",
-		"pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$"
+		"pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$|^$"
 	},
 	"uri": {
 		"type": "string",
-		"pattern": "^https?://"
+		"pattern": "^https?://|^$"
 	},
+  "geometry": {
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": [
+          "Point",
+          "LineString",
+          "Polygon",
+          "MultiPoint",
+          "MultiLineString",
+          "MultiPolygon",
+          "GeometryCollection"
+        ]
+      },
+      "coordinates": {}
+    },
+    "dependencies": {
+      "type": ["coordinates"],
+      "coordinates": ["type"]
+    } 
+  },
 	"data": {}
   },
   "required": [
