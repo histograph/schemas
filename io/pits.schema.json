@@ -14,63 +14,63 @@
     "type": {
       "id": "http://erfgeo.nl/rdf/vertex/type",
       "type": "string",
-	    "enum": [	
-	      "hg:Baljuwschap",
-	      "hg:Baronie",
-	      "hg:Buurt",
-	      "hg:Departement",
-	      "hg:Gebied",
-	      "hg:Gemeente",
+      "enum": [  
+        "hg:Baljuwschap",
+        "hg:Baronie",
+        "hg:Buurt",
+        "hg:Departement",
+        "hg:Gebied",
+        "hg:Gemeente",
         "hg:Gewest",
-	      "hg:Graafschap",
-	      "hg:Heerlijkheid",
-	      "hg:Land",
-	      "hg:PitObject",
-	      "hg:PitType",
-	      "hg:Plaats",
-	      "hg:PlaceInTime",
-	      "hg:Provincie",
-	      "hg:Rijksmonument",
-	      "hg:Stadsdeel",
-	      "hg:Straat",
-	      "hg:Water",
-	      "hg:Wijk"
-	    ]
+        "hg:Graafschap",
+        "hg:Heerlijkheid",
+        "hg:Land",
+        "hg:PitObject",
+        "hg:PitType",
+        "hg:Plaats",
+        "hg:PlaceInTime",
+        "hg:Provincie",
+        "hg:Rijksmonument",
+        "hg:Stadsdeel",
+        "hg:Straat",
+        "hg:Water",
+        "hg:Wijk"
+      ]
     },
-	"time:hasBeginning": {
-		"type": "string",
-		"pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$|^$"
-	},
-	"time:hasEnd": {
-		"type": "string",
-		"pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$|^$"
-	},
-	"uri": {
-		"type": "string",
-		"pattern": "^https?://|^$"
-	},
-  "geometry": {
-    "properties": {
-      "type": {
-        "type": "string",
-        "enum": [
-          "Point",
-          "LineString",
-          "Polygon",
-          "MultiPoint",
-          "MultiLineString",
-          "MultiPolygon",
-          "GeometryCollection"
-        ]
+    "hasBeginning": {
+      "type": "string",
+      "pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$|^$"
+    },
+    "hasEnd": {
+      "type": "string",
+      "pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$|^$"
+    },
+    "uri": {
+      "type": "string",
+      "pattern": "^https?://|^$"
+    },
+    "geometry": {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Point",
+            "LineString",
+            "Polygon",
+            "MultiPoint",
+            "MultiLineString",
+            "MultiPolygon",
+            "GeometryCollection"
+          ]
+        },
+        "coordinates": {}
       },
-      "coordinates": {}
+      "dependencies": {
+        "type": ["coordinates"],
+        "coordinates": ["type"]
+      } 
     },
-    "dependencies": {
-      "type": ["coordinates"],
-      "coordinates": ["type"]
-    } 
-  },
-	"data": {}
+    "data": {}
   },
   "required": [
     "id",
