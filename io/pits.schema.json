@@ -14,7 +14,7 @@
     "type": {
       "id": "http://erfgeo.nl/rdf/vertex/type",
       "type": "string",
-      "enum": [  
+      "enum": [
         "hg:Baljuwschap",
         "hg:Baronie",
         "hg:Buurt",
@@ -34,7 +34,8 @@
         "hg:Stadsdeel",
         "hg:Straat",
         "hg:Water",
-        "hg:Wijk"
+        "hg:Wijk",
+        "hg:Building"
       ]
     },
     "hasBeginning": {
@@ -68,7 +69,7 @@
       "dependencies": {
         "type": ["coordinates"],
         "coordinates": ["type"]
-      } 
+      }
     },
     "data": {}
   },
