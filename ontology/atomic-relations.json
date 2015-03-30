@@ -1,0 +1,32 @@
+[
+  "hga:conceptIdentical",
+  "hga:conceptIsWithin",
+  "hga:conceptContains",
+  "hga:conceptIntersects",
+
+  "hga:typeBroader",
+  "hga:typeNarrower",
+  "hga:typeIntersects",
+
+  "geo:sf-disjoint",
+  "geo:sf-touches",
+  "geo:sf-overlaps",
+  "geo:sf-equals",
+  "geo:sf-within",
+  "geo:sf-contains",
+  "geo:sf-intersects",
+
+  "time:intervalEquals",
+  "time:intervalBefore",
+  "time:intervalMeets",
+  "time:intervalOverlaps",
+  "time:intervalStarts",
+  "time:intervalDuring",
+  "time:intervalFinishes",
+  "time:intervalAfter",
+  "time:intervalMetBy",
+  "time:intervalOverlappedBy",
+  "time:intervalStartedBy",
+  "time:intervalContains",
+  "time:intervalFinishedBy"
+]
