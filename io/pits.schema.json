@@ -1,18 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://erfgeo.nl/rdf/vertex",
+  "id": "http://erfgeo.nl/rdf/pit",
   "type": "object",
   "properties": {
     "id": {
-      "id": "http://erfgeo.nl/rdf/vertex/id",
+      "id": "http://erfgeo.nl/rdf/pit/id",
       "type": ["integer", "string"]
     },
     "name": {
-      "id": "http://erfgeo.nl/rdf/vertex/name",
+      "id": "http://erfgeo.nl/rdf/pit/name",
       "type": "string"
     },
     "type": {
-      "id": "http://erfgeo.nl/rdf/vertex/type",
+      "id": "http://erfgeo.nl/rdf/pit/type",
       "type": "string",
       "enum": [
         "hg:Baljuwschap",
