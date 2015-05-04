@@ -15,6 +15,7 @@
       "id": "http://erfgeo.nl/rdf/pit/type",
       "type": "string",
       "enum": [
+        "hg:Street",
         "hg:Country",
         "hg:Province",
         "hg:Municipality",
