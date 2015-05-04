@@ -42,13 +42,13 @@ hg:Departement
   skos:prefLabel "Departement"@nl ;
   skos:prefLabel "Départements"@fr ;
 .
-hg:Gebied
+hg:Area
   rdf:type hg:PitType ;
   rdfs:label "PITGebied"@nl ;
   skos:prefLabel "Area"@en ;
   skos:prefLabel "PITGebied"@nl ;
 .
-hg:Gemeente
+hg:Municipality
   rdf:type hg:PitType ;
   rdfs:label "Gemeente"@nl ;
   skos:prefLabel "Gemeente"@nl ;
@@ -86,7 +86,7 @@ hg:PitType
   rdfs:label "PITType"^^xsd:string ;
   rdfs:subClassOf owl:Thing ;
 .
-hg:Plaats
+hg:Place
   rdf:type hg:PitType ;
   rdfs:label "Plaats"@nl ;
   skos:prefLabel "Plaats"@nl ;
@@ -97,7 +97,7 @@ hg:PlaceInTime
   rdfs:label "Place in time"^^xsd:string ;
   rdfs:subClassOf owl:Thing ;
 .
-hg:Provincie
+hg:Province
   rdf:type hg:PitType ;
   rdfs:label "Provincie"@nl ;
   skos:prefLabel "Province"@en ;
@@ -114,7 +114,7 @@ hg:Stadsdeel
   skos:prefLabel "Stadsdeel"@nl ;
   skos:prefLabel "Urban district"@en ;
 .
-hg:Straat
+hg:Street
   rdf:type hg:PitType ;
   rdfs:label "Straat"@nl ;
   skos:prefLabel "Straat"@nl ;
