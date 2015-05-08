@@ -6,12 +6,9 @@ Three namespaces:
 
 | Namespace | Name              | URI
 |-----------|-------------------|---------------------------------------
-| `el`      | Erfgoed & Locatie | http://erfgeo.nl/rdf
 | `hg`      | Histograph        | http://schema.histograph.io/#
 | `time`    | Time Ontology     | http://www.w3.org/2006/time#
 | `geo`     | GeoSPARQL         | http://www.opengis.net/ont/geosparql#
-
-URIs in the `el` namespace are [Erfgoed & Location](https://github.com/erfgoed-en-locatie)-specific, but can be used in other Histograph instances, too. PIT types are specified in [`ontology/types.json`](ontology/types.json), but may be moved out of Histograph, into an Erfgoed & Locatie repository.
 
 ### Relations
 
