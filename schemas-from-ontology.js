@@ -1,39 +1,45 @@
-// Reads histograhp.ttl and writes constraints in JSON schema files (io/*.schema.json)
-//
-// Requires https://github.com/RubenVerborgh/N3.js
-//   npm install n3
+var N3 = require('n3');
+var fs = require('fs');
+var parser = N3.Parser();
+var rdfStream = fs.createReadStream('ontology/histograph.ttl');
 
-var N3 = require('n3'),
-    fs = require('fs'),
-    parser = N3.Parser(),
-    rdfStream = fs.createReadStream('ontology/histograph.ttl');
+var pitsSchema = require('./json/pits.schema.json');
+var relationsSchema = require('./json/relations.schema.json');
 
-var hgNamespace = "http://histograph.io/hg#",
-    hgaNamespace = "http://histograph.io/hga#";
+var namespace = 'http://schema.histograph.io/#';
 
-var elTypes = [],
-    hgRelations = [],
-    hgaRelations = [];
+var types = [];
+var relations = [];
+var ignoredRelations = [
+  'hg:hasGeoFeature',
+  'hg:hasPITType'
+];
+
+function writeJSON(path, data) {
+  fs.writeFileSync(path, JSON.stringify(data, null, 2));
+}
 
 parser.parse(rdfStream, function (error, triple, prefixes) {
   if (triple) {
-    if (triple.object === "http://www.w3.org/2002/07/owl#ObjectProperty") {
-      hgRelations.push(triple.subject.replace(hgNamespace, ""));
-      // TODO: atomic relations
+    if (triple.object === 'http://www.w3.org/2002/07/owl#ObjectProperty') {
+      var relation = 'hg:' + triple.subject.replace(namespace, '');
+      if (ignoredRelations.indexOf(relation) == -1) {
+        relations.push(relation);
+      }
     }
 
-    if (triple.object === hgNamespace + "PitType") {
-      elTypes.push(triple.subject.replace(hgNamespace, ""));
+    if (triple.object === namespace + 'PITType') {
+      types.push('hg:' + triple.subject.replace(namespace, ''));
     }
   } else {
-    // TODO: write to JSON Schema files in io dir
+    // Done! Write types and relations to JSON schema files
 
-    console.log("Relations:");
-    console.log(hgRelations);
+    pitsSchema.properties.type.enum = types;
+    writeJSON('./json/pits.schema.json', pitsSchema);
 
-    console.log("");
+    relationsSchema.properties.label.enum = relations;
+    writeJSON('./json/relations.schema.json', relationsSchema);
 
-    console.log("Types:");
-    console.log(elTypes);
+    console.log('Done...');
   }
 });

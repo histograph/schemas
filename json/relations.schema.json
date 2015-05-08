@@ -5,27 +5,32 @@
   "properties": {
     "from": {
       "id": "http://erfgeo.nl/rdf/relation/from",
-      "type": ["integer", "string"]
+      "type": [
+        "integer",
+        "string"
+      ]
     },
     "to": {
       "id": "http://erfgeo.nl/rdf/relation/to",
-      "type": ["integer", "string"]
+      "type": [
+        "integer",
+        "string"
+      ]
     },
     "label": {
       "id": "http://erfgeo.nl/rdf/relation/label",
       "type": "string",
       "enum": [
+        "hg:sameHgConcept",
+        "hg:containsHgConcept",
+        "hg:withinHgConcept",
+        "hg:intersectsHgConcept",
+        "hg:isUsedFor",
         "hg:absorbed",
         "hg:absorbedBy",
-        "hg:contains",
-        "hg:hasGeoFeature",
-        "hg:hasName",
-        "hg:hasPitType",
-        "hg:hasProvEntity",
-        "hg:hasTimeTemporalEntity",
-        "hg:isUsedFor",
-        "hg:sameHgConcept",
-        "hg:within"
+        "hg:originated",
+        "hg:originatedFrom",
+        "hg:contains"
       ]
     }
   },

@@ -66,3 +66,15 @@ See [`elasticsearch/pit.json`](elasticsearch/pit.json).
 - PITs: [`json/pits.schema.json`](json/pits.schema.json)
 - Relations: [`json/relations.schema.json`](json/relations.schema.json)
 - Source metadata: [`json/source.schema.json`](json/source.schema.json)
+
+### schemas-from-ontology.js
+
+`schemas-from-ontology.js` reads the Histograph ontology from [`histograph.ttl`](ontology/histograph.ttl) and writes constraints in JSON schema files ([`json/pits.schema.json`](json/pits.schema.json) and [`json/relations.schema.json`](json/relations.schema.json)).
+
+Install dependencies:
+
+    npm install
+
+Run:
+
+    node schemas-from-ontology.js

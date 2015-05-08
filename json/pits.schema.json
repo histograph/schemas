@@ -5,7 +5,10 @@
   "properties": {
     "id": {
       "id": "http://erfgeo.nl/rdf/pit/id",
-      "type": ["integer", "string"]
+      "type": [
+        "integer",
+        "string"
+      ]
     },
     "name": {
       "id": "http://erfgeo.nl/rdf/pit/name",
@@ -15,16 +18,24 @@
       "id": "http://erfgeo.nl/rdf/pit/type",
       "type": "string",
       "enum": [
+        "hg:Addressje",
+        "hg:Monument",
+        "hg:Building",
         "hg:Street",
-        "hg:Country",
-        "hg:Province",
-        "hg:Municipality",
+        "hg:Neighbourhood",
+        "hg:Borough",
         "hg:Place",
+        "hg:Municipality",
         "hg:Water",
         "hg:Area",
-        "hg:Building",
-        "hg:Monument",
-        "hg:Neighbourhood"
+        "hg:Region",
+        "hg:Province",
+        "hg:Baljuwschap",
+        "hg:Barony",
+        "hg:Departement",
+        "hg:Countship",
+        "hg:Heerlijkheid",
+        "hg:Country"
       ]
     },
     "hasBeginning": {
@@ -56,8 +67,12 @@
         "coordinates": {}
       },
       "dependencies": {
-        "type": ["coordinates"],
-        "coordinates": ["type"]
+        "type": [
+          "coordinates"
+        ],
+        "coordinates": [
+          "type"
+        ]
       }
     },
     "data": {}
