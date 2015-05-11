@@ -30,7 +30,8 @@
         "hg:absorbedBy",
         "hg:originated",
         "hg:originatedFrom",
-        "hg:contains"
+        "hg:contains",
+        "hg:liesIn"
       ]
     }
   },

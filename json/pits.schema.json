@@ -18,7 +18,7 @@
       "id": "http://erfgeo.nl/rdf/pit/type",
       "type": "string",
       "enum": [
-        "hg:Addressje",
+        "hg:Address",
         "hg:Monument",
         "hg:Building",
         "hg:Street",
