@@ -188,18 +188,21 @@ hg:sameHgConcept
   rdfs:label "Same Histograph concept"^^xsd:string ;
   rdfs:range hg:PlaceInTime ;
 .
+
 hg:containsHgConcept
   rdf:type owl:ObjectProperty ;
   rdfs:domain hg:PlaceInTime ;
   rdfs:label "Contains Histograph concept"^^xsd:string ;
   rdfs:range hg:PlaceInTime ;
 .
+
 hg:withinHgConcept
   rdf:type owl:ObjectProperty ;
   rdfs:domain hg:PlaceInTime ;
   rdfs:label "Within Histograph concept"^^xsd:string ;
   rdfs:range hg:PlaceInTime ;
 .
+
 hg:intersectsHgConcept
   rdf:type owl:ObjectProperty ;
   rdfs:domain hg:PlaceInTime ;
@@ -221,6 +224,7 @@ hg:absorbed
   rdfs:range hg:PlaceInTime ;
   owl:inverseOf hg:absorbedBy ;
 .
+
 hg:absorbedBy
   rdf:type owl:ObjectProperty ;
   rdfs:domain hg:PlaceInTime ;
@@ -236,6 +240,7 @@ hg:originated
   rdfs:range hg:PlaceInTime ;
   owl:inverseOf hg:originatedFrom ;
 .
+
 hg:originatedFrom
   rdf:type owl:ObjectProperty ;
   rdfs:domain hg:PlaceInTime ;
@@ -252,6 +257,7 @@ hg:contains
   owl:inverseOf hg:liesIn ;
   owl:sameAs geo:sf-contains ;
 .
+
 hg:liesIn
   rdf:type owl:ObjectProperty ;
   rdfs:domain hg:PlaceInTime ;
