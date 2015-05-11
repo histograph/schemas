@@ -20,6 +20,10 @@ function writeJSON(path, data) {
 }
 
 parser.parse(rdfStream, function (error, triple, prefixes) {
+
+  if(error)
+    console.error(error);
+
   if (triple) {
     if (triple.object === 'http://www.w3.org/2002/07/owl#ObjectProperty') {
       var relation = 'hg:' + triple.subject.replace(namespace, '');
