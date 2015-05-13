@@ -2,13 +2,14 @@
 
 ## Ontology
 
-Three namespaces:
+Four namespaces:
 
 | Namespace | Name              | URI
 |-----------|-------------------|---------------------------------------
 | `hg`      | Histograph        | http://schema.histograph.io/#
 | `time`    | Time Ontology     | http://www.w3.org/2006/time#
 | `geo`     | GeoSPARQL         | http://www.opengis.net/ont/geosparql#
+| `prov`    | Provenance        | http://www.w3.org/ns/prov#
 
 ### Relations
 
@@ -54,6 +55,13 @@ http://www.w3.org/TR/owl-time/#summary
 - `time:intervalStartedBy`
 - `time:intervalContains`
 - `time:intervalFinishedBy`
+ 
+#### Provenance
+
+http://www.w3.org/TR/2011/WD-prov-o-20111213/#overview-of-the-ontology
+
+- `prov:agent`
+- `prov:entity`
 
 ## Elasticsearch mapping
 
