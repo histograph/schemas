@@ -8,7 +8,8 @@
       "type": [
         "integer",
         "string"
-      ]
+      ],
+      "pattern": "^[\\w_-]+(\\.[\\w_-]+)*$"
     },
     "name": {
       "id": "http://erfgeo.nl/rdf/pit/name",
@@ -79,7 +80,6 @@
   },
   "required": [
     "id",
-    "name",
     "type"
   ],
   "additionalProperties": false
