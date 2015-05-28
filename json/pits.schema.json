@@ -28,6 +28,7 @@
         "hg:Place",
         "hg:Municipality",
         "hg:Water",
+        "hg:Polder",
         "hg:Area",
         "hg:Region",
         "hg:Province",

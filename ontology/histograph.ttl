@@ -125,6 +125,12 @@ hg:Water
   skos:prefLabel "Water"@en ;
   skos:prefLabel "Water"@nl ;
 .
+hg:Polder
+  rdf:type hg:PITType ;
+  rdfs:label "Polder"@nl ;
+  skos:prefLabel "Polder"@nl ;
+  skos:prefLabel "Polder"@en ;
+.
 hg:Area
   rdf:type hg:PITType ;
   rdfs:label "Gebied"@nl ;
