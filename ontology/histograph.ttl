@@ -89,6 +89,12 @@ hg:Building
   skos:prefLabel "Gebouw"@nl ;
   skos:prefLabel "Building"@en ;
 .
+hg:Fort
+  rdf:type hg:PITType ;
+  rdfs:label "Fort"@nl ;
+  skos:prefLabel "Fort"@nl ;
+  skos:prefLabel "Fort"@en ;
+.
 hg:Street
   rdf:type hg:PITType ;
   rdfs:label "Straat"@nl ;
