@@ -21,6 +21,7 @@
       "enum": [
         "hg:Address",
         "hg:Monument",
+        "hg:Fort",
         "hg:Building",
         "hg:Street",
         "hg:Neighbourhood",
