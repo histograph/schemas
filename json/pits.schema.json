@@ -9,7 +9,11 @@
         "integer",
         "string"
       ],
-      "pattern": "^[\\w_-]+(\\.[\\w_-]+)*$"
+      "pattern": "^[a-zA-Z0-9]+[\\w\\._-]*$"
+    },
+    "uri": {
+      "type": "string",
+      "pattern": "^\\w+:\/\/.+"
     },
     "name": {
       "id": "http://erfgeo.nl/rdf/pit/name",
@@ -49,10 +53,6 @@
       "type": "string",
       "pattern": "^-?([0-9]{1,4}|[0-9]{2})-([0]?[1-9]|[1][0-2])-([0]?[1-9]|[1|2][0-9]|[3][0|1])$|^$"
     },
-    "uri": {
-      "type": "string",
-      "pattern": "^https?://|^$"
-    },
     "geometry": {
       "properties": {
         "type": {
@@ -80,9 +80,19 @@
     },
     "data": {}
   },
-  "required": [
-    "id",
-    "type"
+  "oneOf": [
+    {
+      "required": [
+        "id",
+        "type"
+      ]
+    },
+    {
+      "required": [
+        "uri",
+        "type"
+      ]
+    }
   ],
   "additionalProperties": false
 }

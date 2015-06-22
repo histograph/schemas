@@ -17,8 +17,8 @@
         "string"
       ]
     },
-    "label": {
-      "id": "http://erfgeo.nl/rdf/relation/label",
+    "type": {
+      "id": "http://erfgeo.nl/rdf/relation/type",
       "type": "string",
       "enum": [
         "hg:sameHgConcept",
@@ -38,6 +38,6 @@
   "required": [
     "from",
     "to",
-    "label"
+    "type"
   ]
 }

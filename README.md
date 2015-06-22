@@ -55,7 +55,7 @@ http://www.w3.org/TR/owl-time/#summary
 - `time:intervalStartedBy`
 - `time:intervalContains`
 - `time:intervalFinishedBy`
- 
+
 #### Provenance
 
 http://www.w3.org/TR/2011/WD-prov-o-20111213/#overview-of-the-ontology
@@ -74,6 +74,22 @@ See [`elasticsearch/pit.json`](elasticsearch/pit.json).
 - PITs: [`json/pits.schema.json`](json/pits.schema.json)
 - Relations: [`json/relations.schema.json`](json/relations.schema.json)
 - Source metadata: [`json/source.schema.json`](json/source.schema.json)
+
+### PITs
+
+All PITs must have either an `id` or an `uri` and a type, and optionally geometry, data and date fields. Hence, a line in a NDJSON file containing PITs is either:
+
+    {"id": 123, "type": "hg:Place"}
+
+Or:
+
+    {"uri": "http://sws.geonames.org/2331234", "type": "hg:Place"}
+
+### Relations
+
+All relations must have `from`, `to` and `type` fields:
+
+    {"from": "http://sws.geonames.org/2331234", "to": "gemeentegeschiedenis/leiden", "type": "hg:liesIn"}
 
 ### schemas-from-ontology.js
 

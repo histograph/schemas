@@ -41,7 +41,7 @@ parser.parse(rdfStream, function (error, triple, prefixes) {
     pitsSchema.properties.type.enum = types;
     writeJSON('./json/pits.schema.json', pitsSchema);
 
-    relationsSchema.properties.label.enum = relations;
+    relationsSchema.properties.type.enum = relations;
     writeJSON('./json/relations.schema.json', relationsSchema);
 
     console.log('Done...');
