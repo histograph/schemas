@@ -17,7 +17,7 @@
         "string"
       ]
     },
-    "type": {
+    "label": {
       "id": "http://erfgeo.nl/rdf/relation/type",
       "type": "string",
       "enum": [
