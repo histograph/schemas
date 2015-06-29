@@ -1,7 +1,9 @@
 [
   {
-    "hasBeginning": null,
-    "hasEnd": null,
+    "constraints": {
+      "hasBeginning": null,
+      "hasEnd": null
+    },
     "hierarchy": [
       "hg:Address",
       "hg:Building",
@@ -10,8 +12,10 @@
     ]
   },
   {
-    "hasBeginning": "1812-01-01",
-    "hasEnd": "1815-01-01",
+    "constraints": {
+      "hasBeginning": "1812-01-01",
+      "hasEnd": "1815-01-01"
+    },
     "hierarchy": [
       "hg:Place",
       "hg:Municipality",
@@ -20,8 +24,10 @@
     ]
   },
   {
-    "hasBeginning": "1815-01-01",
-    "hasEnd": null,
+    "constraints": {
+      "hasBeginning": "1815-01-01",
+      "hasEnd": null,
+    },
     "hierarchy": [
       "hg:Place",
       "hg:Municipality",
