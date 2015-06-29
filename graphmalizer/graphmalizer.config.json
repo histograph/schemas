@@ -1,0 +1,97 @@
+{
+  "types": {
+    "hg:Address": {
+      "node": {}
+    },
+    "hg:Monument": {
+      "node": {}
+    },
+    "hg:Building": {
+      "node": {}
+    },
+    "hg:Fort": {
+      "node": {}
+    },
+    "hg:Street": {
+      "node": {}
+    },
+    "hg:Neighbourhood": {
+      "node": {}
+    },
+    "hg:Borough": {
+      "node": {}
+    },
+    "hg:Place": {
+      "node": {}
+    },
+    "hg:Municipality": {
+      "node": {}
+    },
+    "hg:Water": {
+      "node": {}
+    },
+    "hg:Polder": {
+      "node": {}
+    },
+    "hg:Area": {
+      "node": {}
+    },
+    "hg:Region": {
+      "node": {}
+    },
+    "hg:Province": {
+      "node": {}
+    },
+    "hg:Baljuwschap": {
+      "node": {}
+    },
+    "hg:Barony": {
+      "node": {}
+    },
+    "hg:Departement": {
+      "node": {}
+    },
+    "hg:Countship": {
+      "node": {}
+    },
+    "hg:Heerlijkheid": {
+      "node": {}
+    },
+    "hg:Country": {
+      "node": {}
+    },
+    "hg:sameHgConcept": {
+      "edge": {}
+    },
+    "hg:containsHgConcept": {
+      "edge": {}
+    },
+    "hg:withinHgConcept": {
+      "edge": {}
+    },
+    "hg:intersectsHgConcept": {
+      "edge": {}
+    },
+    "hg:isUsedFor": {
+      "edge": {}
+    },
+    "hg:absorbed": {
+      "edge": {}
+    },
+    "hg:absorbedBy": {
+      "edge": {}
+    },
+    "hg:originated": {
+      "edge": {}
+    },
+    "hg:originatedFrom": {
+      "edge": {}
+    },
+    "hg:contains": {
+      "edge": {}
+    },
+    "hg:liesIn": {
+      "edge": {}
+    }
+  }
+}

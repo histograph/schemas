@@ -57,7 +57,7 @@ parser.parse(rdfStream, function (error, triple, prefixes) {
       config.types[t] = EDGE;
     });
 
-   writeJSON('./json/graphmalizer.config.json', config);
+    writeJSON('./graphmalizer/graphmalizer.config.json', config);
 
     console.log('Done...');
   }
