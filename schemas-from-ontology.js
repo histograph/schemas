@@ -44,6 +44,21 @@ parser.parse(rdfStream, function (error, triple, prefixes) {
     relationsSchema.properties.type.enum = relations;
     writeJSON('./json/relations.schema.json', relationsSchema);
 
+   // build graphmalizer configuration file
+    var NODE = {node: {}};
+    var EDGE = {edge: {}};
+    var config = {types: {}};
+
+    types.forEach(function(t){
+      config.types[t] = NODE;
+    });
+
+    relations.forEach(function(t){
+      config.types[t] = EDGE;
+    });
+
+   writeJSON('./json/graphmalizer.config.json', config);
+
     console.log('Done...');
   }
 });
