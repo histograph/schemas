@@ -1,10 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://erfgeo.nl/rdf/pit",
   "type": "object",
   "properties": {
     "id": {
-      "id": "http://erfgeo.nl/rdf/pit/id",
       "type": [
         "integer",
         "string"
@@ -16,11 +14,9 @@
       "pattern": "^\\w+://.+"
     },
     "name": {
-      "id": "http://erfgeo.nl/rdf/pit/name",
       "type": "string"
     },
     "type": {
-      "id": "http://erfgeo.nl/rdf/pit/type",
       "type": "string",
       "enum": [
         "hg:Address",
