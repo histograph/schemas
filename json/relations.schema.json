@@ -21,7 +21,6 @@
         "hg:containsHgConcept",
         "hg:withinHgConcept",
         "hg:intersectsHgConcept",
-        "hg:isUsedFor",
         "hg:absorbed",
         "hg:absorbedBy",
         "hg:originated",

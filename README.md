@@ -73,7 +73,7 @@ See [`elasticsearch/pit.json`](elasticsearch/pit.json).
 
 - PITs: [`json/pits.schema.json`](json/pits.schema.json)
 - Relations: [`json/relations.schema.json`](json/relations.schema.json)
-- Source metadata: [`json/source.schema.json`](json/source.schema.json)
+- Dataset metadata: [`json/dataset.schema.json`](json/dataset.schema.json)
 
 ### PITs
 

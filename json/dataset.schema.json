@@ -1,42 +1,32 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://erfgeo.nl/rdf/source",
   "type": "object",
   "properties": {
     "id": {
-      "id": "http://erfgeo.nl/rdf/source/id",
       "type": "string"
     },
     "title": {
-      "id": "http://erfgeo.nl/rdf/source/title",
       "type": "string"
     },
     "description": {
-      "id": "http://erfgeo.nl/rdf/source/description",
       "type": "string"
     },
     "license": {
-      "id": "http://erfgeo.nl/rdf/source/license",
       "type": "string"
     },
     "author": {
-      "id": "http://erfgeo.nl/rdf/source/author",
       "type": "string"
     },
     "website": {
-      "id": "http://erfgeo.nl/rdf/source/website",
       "type": "string"
     },
     "edits": {
-      "id": "http://erfgeo.nl/rdf/source/edits",
       "type": "string"
     },
     "editor": {
-      "id": "http://erfgeo.nl/rdf/source/editor",
       "type": "string"
     },
     "sourceCreationDate": {
-      "id": "http://erfgeo.nl/rdf/source/sourceCreationDate",
       "type": "string"
     }
   },

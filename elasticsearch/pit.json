@@ -31,7 +31,7 @@
           },
           "type": "string"
         },
-        "source": {
+        "dataset": {
           "index": "not_analyzed",
           "type": "string"
         },
