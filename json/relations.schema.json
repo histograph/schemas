@@ -17,16 +17,18 @@
     "type": {
       "type": "string",
       "enum": [
-        "hg:sameHgConcept",
-        "hg:containsHgConcept",
-        "hg:withinHgConcept",
-        "hg:intersectsHgConcept",
-        "hg:absorbed",
-        "hg:absorbedBy",
-        "hg:originated",
-        "hg:originatedFrom",
-        "hg:contains",
-        "hg:liesIn"
+        "hasGeoFeature",
+        "hasPITType",
+        "sameHgConcept",
+        "containsHgConcept",
+        "withinHgConcept",
+        "intersectsHgConcept",
+        "absorbed",
+        "absorbedBy",
+        "originated",
+        "originatedFrom",
+        "contains",
+        "liesIn"
       ]
     }
   },

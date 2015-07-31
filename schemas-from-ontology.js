@@ -1,6 +1,7 @@
 var N3 = require('n3');
 var fs = require('fs');
 var parser = N3.Parser();
+
 var rdfStream = fs.createReadStream('ontology/histograph.ttl');
 
 var pitsSchema = require('./json/pits.schema.json');
@@ -21,19 +22,20 @@ function writeJSON(path, data) {
 
 parser.parse(rdfStream, function (error, triple, prefixes) {
 
-  if(error)
+  if (error) {
     console.error(error);
+  }
 
   if (triple) {
     if (triple.object === 'http://www.w3.org/2002/07/owl#ObjectProperty') {
-      var relation = 'hg:' + triple.subject.replace(namespace, '');
+      var relation = triple.subject.replace(namespace, '');
       if (ignoredRelations.indexOf(relation) == -1) {
         relations.push(relation);
       }
     }
 
     if (triple.object === namespace + 'PITType') {
-      types.push('hg:' + triple.subject.replace(namespace, ''));
+      types.push(triple.subject.replace(namespace, ''));
     }
   } else {
     // Done! Write types and relations to JSON schema files
@@ -46,7 +48,9 @@ parser.parse(rdfStream, function (error, triple, prefixes) {
 
    // build graphmalizer configuration file
     var NODE = {node: {}};
-    var EDGE = {edge: {}};
+    var ARC = {arc: {}};
+    var EQUIVALENCE = {equivalence: {}};
+
     var config = {types: {}};
 
     types.forEach(function(t){
@@ -54,7 +58,7 @@ parser.parse(rdfStream, function (error, triple, prefixes) {
     });
 
     relations.forEach(function(t){
-      config.types[t] = EDGE;
+      config.types[t] = (t === 'sameHgConcept') ? EQUIVALENCE : ARC;
     });
 
     writeJSON('./graphmalizer/graphmalizer.config.json', config);
