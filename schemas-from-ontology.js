@@ -20,7 +20,7 @@ function writeJSON(path, data) {
   fs.writeFileSync(path, JSON.stringify(data, null, 2));
 }
 
-parser.parse(rdfStream, function (error, triple, prefixes) {
+parser.parse(rdfStream, function(error, triple /*, prefixes*/) {
 
   if (error) {
     console.error(error);
@@ -46,18 +46,18 @@ parser.parse(rdfStream, function (error, triple, prefixes) {
     relationsSchema.properties.type.enum = relations;
     writeJSON('./json/relations.schema.json', relationsSchema);
 
-   // build graphmalizer configuration file
+    // build graphmalizer configuration file
     var NODE = {node: {}};
     var ARC = {arc: {}};
     var EQUIVALENCE = {equivalence: {}};
 
     var config = {types: {}};
 
-    types.forEach(function(t){
+    types.forEach(function(t) {
       config.types[t] = NODE;
     });
 
-    relations.forEach(function(t){
+    relations.forEach(function(t) {
       config.types[t] = (t === 'sameHgConcept') ? EQUIVALENCE : ARC;
     });
 
