@@ -1,8 +1,11 @@
-var path = require('path');
+var util = require('util');
+var config = require('histograph-config');
 
-module.exports = {
-  dataset: require(path.join(__dirname, 'json', 'dataset.schema.json')),
-  pits: require(path.join(__dirname, 'json', 'pits.schema.json')),
-  relations: require(path.join(__dirname, 'json', 'relations.schema.json')),
-  graphmalizer: require(path.join(__dirname, 'graphmalizer', 'graphmalizer.config.json'))
-};
+var fn = config.schemas.module;
+
+try {
+  module.exports = require(fn || './schemas');
+} catch (e) {
+  var s = util.format('Tried to load custom schema from file "%s", but failed with error "%s"', fn, e.message);
+  throw new Error(s, e);
+}

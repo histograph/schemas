@@ -12,7 +12,8 @@
   },
   "homepage": "https://github.com/histograph/schemas#readme",
   "dependencies": {
-    "n3": "^0.4.2"
+    "n3": "^0.4.2",
+    "histograph-config": "histograph/config"
   },
   "devDependencies": {
     "mocha": "^2.2.1",
