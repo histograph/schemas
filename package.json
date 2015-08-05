@@ -1,23 +1,41 @@
 {
   "name": "histograph-schemas",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "",
-  "main": "schemas-from-ontology.js",
-  "dependencies": {
-    "n3": "^0.4.2"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/histograph/schemas.git"
+    "url": "git+https://github.com/histograph/schemas.git"
   },
-  "author": "Bert Spaan",
-  "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/histograph/schemas/issues"
   },
-  "homepage": "https://github.com/histograph/schemas"
+  "homepage": "https://github.com/histograph/schemas#readme",
+  "dependencies": {
+    "n3": "^0.4.2",
+    "histograph-config": "histograph/config"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "jscs": "^1.10.0",
+    "jshint": "^2.6.0"
+  },
+  "scripts": {
+    "test": "jshint *.js && jscs *.js"
+  },
+  "author": "Bert Spaan <bert@waag.org>",
+  "license": "GPL-3.0",
+  "jshintConfig": {
+    "node": true,
+    "globalstrict": false,
+    "undef": true,
+    "unused": true,
+    "noarg": true
+  },
+  "jscsConfig": {
+    "preset": "airbnb",
+    "requireCamelCaseOrUpperCaseIdentifiers": null,
+    "disallowMultipleVarDecl": true,
+    "requireMultipleVarDecl": null
+  }
 }

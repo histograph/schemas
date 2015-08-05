@@ -222,13 +222,6 @@ hg:intersectsHgConcept
   rdfs:range hg:PlaceInTime ;
 .
 
-hg:isUsedFor
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain hg:PlaceInTime ;
-  rdfs:label "Is used for"^^xsd:string ;
-  rdfs:range hg:PlaceInTime ;
-.
-
 hg:absorbed
   rdf:type owl:ObjectProperty ;
   rdfs:domain hg:PlaceInTime ;

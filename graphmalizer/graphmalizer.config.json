@@ -1,97 +1,100 @@
 {
   "types": {
-    "hg:Address": {
+    "Address": {
       "node": {}
     },
-    "hg:Monument": {
+    "Monument": {
       "node": {}
     },
-    "hg:Building": {
+    "Building": {
       "node": {}
     },
-    "hg:Fort": {
+    "Fort": {
       "node": {}
     },
-    "hg:Street": {
+    "Street": {
       "node": {}
     },
-    "hg:Neighbourhood": {
+    "Neighbourhood": {
       "node": {}
     },
-    "hg:Borough": {
+    "Borough": {
       "node": {}
     },
-    "hg:Place": {
+    "Place": {
       "node": {}
     },
-    "hg:Municipality": {
+    "Municipality": {
       "node": {}
     },
-    "hg:Water": {
+    "Water": {
       "node": {}
     },
-    "hg:Polder": {
+    "Polder": {
       "node": {}
     },
-    "hg:Area": {
+    "Area": {
       "node": {}
     },
-    "hg:Region": {
+    "Region": {
       "node": {}
     },
-    "hg:Province": {
+    "Province": {
       "node": {}
     },
-    "hg:Baljuwschap": {
+    "Baljuwschap": {
       "node": {}
     },
-    "hg:Barony": {
+    "Barony": {
       "node": {}
     },
-    "hg:Departement": {
+    "Departement": {
       "node": {}
     },
-    "hg:Countship": {
+    "Countship": {
       "node": {}
     },
-    "hg:Heerlijkheid": {
+    "Heerlijkheid": {
       "node": {}
     },
-    "hg:Country": {
+    "Country": {
       "node": {}
     },
-    "hg:sameHgConcept": {
-      "edge": {}
+    "hasGeoFeature": {
+      "arc": {}
     },
-    "hg:containsHgConcept": {
-      "edge": {}
+    "hasPITType": {
+      "arc": {}
     },
-    "hg:withinHgConcept": {
-      "edge": {}
+    "sameHgConcept": {
+      "equivalence": {}
     },
-    "hg:intersectsHgConcept": {
-      "edge": {}
+    "containsHgConcept": {
+      "arc": {}
     },
-    "hg:isUsedFor": {
-      "edge": {}
+    "withinHgConcept": {
+      "arc": {}
     },
-    "hg:absorbed": {
-      "edge": {}
+    "intersectsHgConcept": {
+      "arc": {}
     },
-    "hg:absorbedBy": {
-      "edge": {}
+    "absorbed": {
+      "arc": {}
     },
-    "hg:originated": {
-      "edge": {}
+    "absorbedBy": {
+      "arc": {}
     },
-    "hg:originatedFrom": {
-      "edge": {}
+    "originated": {
+      "arc": {}
     },
-    "hg:contains": {
-      "edge": {}
+    "originatedFrom": {
+      "arc": {}
     },
-    "hg:liesIn": {
-      "edge": {}
+    "contains": {
+      "arc": {}
+    },
+    "liesIn": {
+      "arc": {}
     }
   }
 }

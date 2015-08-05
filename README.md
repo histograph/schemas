@@ -73,7 +73,7 @@ See [`elasticsearch/pit.json`](elasticsearch/pit.json).
 
 - PITs: [`json/pits.schema.json`](json/pits.schema.json)
 - Relations: [`json/relations.schema.json`](json/relations.schema.json)
-- Source metadata: [`json/source.schema.json`](json/source.schema.json)
+- Dataset metadata: [`json/dataset.schema.json`](json/dataset.schema.json)
 
 ### PITs
 
@@ -102,3 +102,9 @@ Install dependencies:
 Run:
 
     node schemas-from-ontology.js
+
+## License
+
+Copyright (C) 2015 [Waag Society](http://waag.org).
+
+The source for Histograph is released under the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
