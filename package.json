@@ -13,6 +13,7 @@
   "homepage": "https://github.com/histograph/schemas#readme",
   "dependencies": {
     "n3": "^0.4.2",
+    "fuzzy-dates": "histograph/fuzzy-dates",
     "histograph-config": "histograph/config"
   },
   "devDependencies": {

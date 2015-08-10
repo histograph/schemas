@@ -16,20 +16,7 @@
     },
     "type": {
       "type": "string",
-      "enum": [
-        "hasGeoFeature",
-        "hasPITType",
-        "sameHgConcept",
-        "containsHgConcept",
-        "withinHgConcept",
-        "intersectsHgConcept",
-        "absorbed",
-        "absorbedBy",
-        "originated",
-        "originatedFrom",
-        "contains",
-        "liesIn"
-      ]
+      "enum": null
     }
   },
   "required": [

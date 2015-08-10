@@ -30,6 +30,7 @@
       "type": "string"
     }
   },
+  "additionalProperties": false,
   "required": [
     "id",
     "title",

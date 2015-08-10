@@ -1,107 +1,39 @@
 ## Histograph Schemas
 
-## Ontology
+Creates JSON schemas and Turtle/N3 ontology from types and relations in [Histograph configuration file](https://github.com/histograph/config/histograph.default.yml).
 
-Four namespaces:
+```js
+var schemas = require('histograph-schemas');
 
-| Namespace | Name              | URI
-|-----------|-------------------|---------------------------------------
-| `hg`      | Histograph        | http://schema.histograph.io/#
-| `time`    | Time Ontology     | http://www.w3.org/2006/time#
-| `geo`     | GeoSPARQL         | http://www.opengis.net/ont/geosparql#
-| `prov`    | Provenance        | http://www.w3.org/ns/prov#
+// schemas.pits:         PITs JSON schema
+// schemas.relations:    relations JSON schema
+// schemas.dataset:      dataset JSON schema
+// schemas.graphmalizer: [Graphmalizer](https://github.com/graphmalizer/graphmalizer-core) configuration
 
-### Relations
-
-#### Concept
-
-- `hg:conceptIdentical`
-- `hg:conceptIsWithin`
-- `hg:conceptContains`
-- `hg:conceptIntersects`
-
-#### Type
-
-- `hg:typeBroader`
-- `hg:typeNarrower`
-- `hg:typeIntersects`
-
-#### Geo
-
-http://en.wikipedia.org/wiki/GeoSPARQL
-
-- `geo:sf-disjoint`
-- `geo:sf-touches`
-- `geo:sf-overlaps`
-- `geo:sf-equals`
-- `geo:sf-within`
-- `geo:sf-contains`
-- `geo:sf-intersects`
-
-#### Time
-
-http://www.w3.org/TR/owl-time/#summary
-
-- `time:intervalEquals`
-- `time:intervalBefore`
-- `time:intervalMeets`
-- `time:intervalOverlaps`
-- `time:intervalStarts`
-- `time:intervalDuring`
-- `time:intervalFinishes`
-- `time:intervalAfter`
-- `time:intervalMetBy`
-- `time:intervalOverlappedBy`
-- `time:intervalStartedBy`
-- `time:intervalContains`
-- `time:intervalFinishedBy`
-
-#### Provenance
-
-http://www.w3.org/TR/2011/WD-prov-o-20111213/#overview-of-the-ontology
-
-- `prov:agent`
-- `prov:entity`
-
-## Elasticsearch mapping
-
-See [`elasticsearch/pit.json`](elasticsearch/pit.json).
-
-## Histograph IO - JSON schemas
-
-[Histograph IO](https://github.com/histograph/io) uses the following [JSON Schema](http://json-schema.org/) files to validate all data going into Histograph:
-
-- PITs: [`json/pits.schema.json`](json/pits.schema.json)
-- Relations: [`json/relations.schema.json`](json/relations.schema.json)
-- Dataset metadata: [`json/dataset.schema.json`](json/dataset.schema.json)
+schemas.ontology(function(err, results) {
+  // results:            Turtle/N3 ontology
+});
+```
 
 ### PITs
 
-All PITs must have either an `id` or an `uri` and a type, and optionally geometry, data and date fields. Hence, a line in a NDJSON file containing PITs is either:
+All PITs must have either an `id` or an `uri` and a type, and optionally geometry, data and date fields. Hence, a line in a NDJSON file containing PITs can be either:
 
     {"id": 123, "type": "hg:Place"}
 
 Or:
 
-    {"uri": "http://sws.geonames.org/2331234", "type": "hg:Place"}
+    {"uri": "http://sws.geonames.org/2331234", "type": "Place"}
 
 ### Relations
 
 All relations must have `from`, `to` and `type` fields:
 
-    {"from": "http://sws.geonames.org/2331234", "to": "gemeentegeschiedenis/leiden", "type": "hg:liesIn"}
+    {"from": "http://sws.geonames.org/2331234", "to": "gemeentegeschiedenis/leiden", "type": "liesIn"}
 
-### schemas-from-ontology.js
+## Elasticsearch mapping
 
-`schemas-from-ontology.js` reads the Histograph ontology from [`histograph.ttl`](ontology/histograph.ttl) and writes constraints in JSON schema files ([`json/pits.schema.json`](json/pits.schema.json) and [`json/relations.schema.json`](json/relations.schema.json)).
-
-Install dependencies:
-
-    npm install
-
-Run:
-
-    node schemas-from-ontology.js
+See [`elasticsearch/pit.json`](elasticsearch/pit.json).
 
 ## License
 
