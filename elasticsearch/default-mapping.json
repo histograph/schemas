@@ -37,11 +37,11 @@
       "index": "not_analyzed",
       "type": "string"
     },
-    "startDate": {
+    "validSince": {
       "format": "date_optional_time",
       "type": "date"
     },
-    "endDate": {
+    "validUntil": {
       "format": "date_optional_time",
       "type": "date"
     }

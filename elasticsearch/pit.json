@@ -2,10 +2,6 @@
   "mappings": {
     "pit": {
       "properties": {
-        "endDate": {
-          "format": "date_optional_time",
-          "type": "date"
-        },
         "geometry": {
           "precision": "1m",
           "tree": "quadtree",
@@ -35,7 +31,11 @@
           "index": "not_analyzed",
           "type": "string"
         },
-        "startDate": {
+        "validSince": {
+          "format": "date_optional_time",
+          "type": "date"
+        },
+        "validUntil": {
           "format": "date_optional_time",
           "type": "date"
         },
