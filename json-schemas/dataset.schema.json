@@ -26,7 +26,7 @@
     "editor": {
       "type": "string"
     },
-    "sourceCreationDate": {
+    "creationDate": {
       "type": "string"
     }
   },
