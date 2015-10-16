@@ -31,10 +31,6 @@ All relations must have `from`, `to` and `type` fields:
 
     {"from": "http://sws.geonames.org/2331234", "to": "gemeentegeschiedenis/leiden", "type": "liesIn"}
 
-## Elasticsearch mapping
-
-See [`elasticsearch/pit.json`](elasticsearch/pit.json).
-
 ## License
 
 Copyright (C) 2015 [Waag Society](http://waag.org).
