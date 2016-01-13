@@ -13,8 +13,8 @@
   "homepage": "https://github.com/histograph/schemas#readme",
   "dependencies": {
     "n3": "^0.4.2",
-    "fuzzy-dates": "histograph/fuzzy-dates",
-    "histograph-config": "histograph/config"
+    "fuzzy-dates": "git+https://github.com/histograph/fuzzy-dates#v0.5.0",
+    "histograph-config": "git+https://github.com/histograph/config#v0.5.0"
   },
   "devDependencies": {
     "mocha": "^2.2.1",
@@ -25,7 +25,7 @@
     "test": "jshint *.js && jscs *.js"
   },
   "author": "Bert Spaan <bert@waag.org>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "jshintConfig": {
     "node": true,
     "globalstrict": false,
