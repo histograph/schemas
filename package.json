@@ -13,8 +13,8 @@
   "homepage": "https://github.com/histograph/schemas#readme",
   "dependencies": {
     "n3": "^0.4.2",
-    "fuzzy-dates": "git+https://github.com/histograph/fuzzy-dates#v0.5.0",
-    "histograph-config": "git+https://github.com/histograph/config#v0.5.1"
+    "fuzzy-dates": "git+https://github.com/histograph/fuzzy-dates#puppetdeploy",
+    "histograph-config": "git+https://github.com/histograph/config#puppetdeploy"
   },
   "devDependencies": {
     "mocha": "^2.2.1",
