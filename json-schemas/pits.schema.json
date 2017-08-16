@@ -41,13 +41,25 @@
             "GeometryCollection"
           ]
         },
-        "coordinates": {}
+        "coordinates": {},
+        "geometries":  {}
       },
       "dependencies": {
-        "type": [
-          "coordinates"
-        ],
+        "oneOf": [
+          {
+            "type": [
+              "coordinates"
+            ]
+          },
+          {
+            "type": [
+              "geometries"
+            ]
+          }],
         "coordinates": [
+          "type"
+        ],
+        "geometries": [
           "type"
         ]
       }
